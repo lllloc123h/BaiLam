@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 4 Lab 2 Backend</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="/js/bootstrap.bundle.js"></script>
+</head>
+<body>
+    <div class="container mt-3">
+        <h1>Bài tập ứng dụng Modal cho tài khoản</h1>
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">Tài khoản</button>
+
+        <div class="modal" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Đăng Nhập/Đăng Ký</h4>
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li class="nav-item">
+                                    <a href="#DangKy" data-bs-toggle="tab" class="nav-link">Đăng Ký</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#DangNhap" data-bs-toggle="tab" class="nav-link">Đăng Nhập</a>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content">
+                                <div id="DangKy" class="container tab-pane active">
+                                    <h2 class="title mb-2">Form đăng ký thông tin</h2>
+                                    <form class="border rounded p-4">
+                                        <label class="form-label">Họ và tên</label>
+                                        <input type="text" class="form-control mb-3" placeholder="Nhập họ và tên">
+
+                                        <label class="form-label">Email</label>
+                                        <input type="text" class="form-control mb-3" placeholder="Nhập Email">
+
+                                        <label class="form-label">Số điện thoại</label>
+                                        <input type="text" class="form-control mb-3" placeholder="Nhập số điện thoại">
+
+                                        <label class="form-label">Nhập mật khẩu</label>
+                                        <input type="password" class="form-control mb-3" placeholder="Nhập mật khẩu">
+
+                                        <label class="form-label">Xác nhận mật khẩu</label>
+                                        <input type="password" class="form-control mb-3" placeholder="Xác nhận mật khẩu">
+
+                                        <div>
+                                            <label class="form-label">Giới tính</label>
+                                            <input type="radio" value="Nam" name="giới_tính" class="mx-1">Nam
+                                            <input type="radio" value="Nữ" name="giới_tính" class="mx-1">Nữ
+                                        </div>
+
+                                        <label class="form-label">Ngôn ngữ</label>
+                                        <div>
+                                            <select class="form-select">
+                                                <option value="Tiếng Việt">Tiếng Việt</option>
+                                                <option value="Tiếng Hàn">Tiếng Hàn</option>
+                                                <option value="Tiếng Thái">Tiếng Thái</option>
+                                            </select>
+                                        </div>
+                                        <div class="my-3">
+                                            <input type="checkbox" id="agree" name="agree">
+                                            <label for="agree">Tôi đồng ý</label>
+                                        </div>
+                                        <button class="btn btn-primary">Đăng Ký</button>
+                                    </form>
+                                </div>
+
+                                <div id="DangNhap" class="container tab-pane fade">
+                                    <h2>Form đăng nhập</h2>
+                                    <form class="border rounded p-3">
+                                        <label class="form-label">Nhập Email</label>
+                                        <div class="form-floating mb-4">
+                                            <input type="email" class="form-control" placeholder="Nhập email">
+                                            <label>Nhập email</label>                       
+                                        </div>
+
+                                        <label class="form-label">Nhập mật khẩu</label>
+                                        <div class="form-floating mb-4">
+                                            <input type="password" class="form-control" placeholder="Nhập mật khẩu">
+                                            <label>Nhập mật khẩu</label>                       
+                                        </div>
+
+                                        <button class="btn btn-primary">Đăng nhập</button>
+                                    </form>
+                                </div>
+                            </div> <!-- End of tab-content -->
+                        </div> <!-- End of container inside modal-body -->
+                    </div> <!-- End of modal-body -->
+                </div> <!-- End of modal-content -->
+            </div> <!-- End of modal-dialog -->
+        </div> <!-- End of modal -->
+    </div> <!-- End of main container -->
+</body>
+</html>

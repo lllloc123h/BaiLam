@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="container">
+            <!-- Demo table -->
+                <!--class.table-->
+                <!-- 
+                    -table tạo bảng
+                    -table-bordered thiết kế bảng có các border
+                    -table dark làm cho nền bảng thành màu đen
+                    -table-hover tạo hiệu ứng hover
+                    -table-striped tạo nền trắng xám xen kẻ
+                -->
+                <table class="table table-bordered table-striped table-hover ">
+                    <thead>
+                        <tr>
+                            <th>Họ</th>
+                            <th>Tên</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Bùi</td>
+                            <td>Hữu Lộc</td>
+                            <td>Loc@gamil.com</td>
+                        </tr>
+                        <tr>
+                            <td>Lê Đinh</td>
+                            <td>Phúc Hậu</td>
+                            <td>Hau@gamil.com</td>
+                        </tr>
+                        <tr>
+                            <td>Nguyễn</td>
+                            <td>Nhựt Khả</td>
+                            <td>Kha@gamil.com</td>
+                        </tr>
+                    </tbody>
+                </table>
+            <!-- demo form control -->
+                <!--thay đổi kích thước nội dung đầu vào bằng
+                    -to lên form-control-lg
+                    -nhỏ lại form-control-sm
+                -->
+                <div class="mb-3">
+                    <label class="form-label">
+                        Email address
+                    </label>
+                    <input type="email" class="form-control  form-control-lg" placeholder="example@gmail.com">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">
+                        example textarea
+                    </label>
+                    <textarea class="form-control form-control-sm" rows="3" placeholder="thông tin cá nhân"></textarea>
+                </div>
+            <!-- demo disabled(vô hiệu hóa ô input) và readonly( chỉ đọc ) -->
+                <form>
+                    <input type="text" class="form-control mb-2" placeholder="normal">
+                    <input type="text" class="form-control mb-2" placeholder="disabled" disabled>
+<input type="text" class="form-control mb-2" placeholder="readonly" readonly>
+                </form>
+            <!-- tạo 1 input không có đường viền bằng form-control-plaintext -->
+                <input type="text" class="form-control-plaintext" placeholder="input data here">
+            <!-- tạo 1 bộ chọn màu với form-control-color -->
+                <input type="color" class="form-control-color">
+            <!-- tạo file input -->
+                <!-- chọn 1 file  -->
+                <div class="mb-3">
+                    <label class="form-label">chọn 1 file</label>
+                    <input type="file">
+                </div>
+                <!-- để chọn đc nhiều file cần thêm thuộc tính multiple để chọn đc nhiều file -->
+                <div class="mb-3">
+                    <label class="form-label">chọn 1 nhiều file</label>
+                    <input type="file" multiple>
+                </div>
+                <!-- để vô hiệu hóa chọn file ta có thuộc tính disabled -->
+                <div class="mb-3">
+                    <label class="form-label">mục chọn file bị vô hiệu hóa</label>
+                    <input type="file" disabled>
+                </div>
+            <!-- tạo mục lựa chọn bằng form-select -->
+                <select class="form-select">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                </select>
+            <!-- tạo danh sách tùy chọn đc xác định trước khi nhập dữ liệu -->
+            <form>
+                <label class="form-label">Chọn trình duyệt từ danh sách:</label>
+                <input class="form-control" list="browsers" name="browser">
+                <datalist id="browsers">
+                    <option value="Edge">
+                    <option value="Firefox">
+                    <option value="Chrome">
+                    <option value="Opera">
+                    <option value="Safari">
+                </datalist>
+            </form>
+            <!-- tạo nút radio button khi muốn chọn 1 lựa chọn từ danh sách -->
+            <form>
+                <!-- thêm thuộc tính checked để đc là lựa chọn sẳn -->
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" checked name="example">
+                    <label class="form-check-label">option 1</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" name="example">
+                    <label class="form-check-label">option 2</label>
+                </div>
+                <!-- thêm thuộc tính disable để nút bị vô hiệu hóa -->
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" disabled name="example">
+                    <label class="form-check-label">option 3</label>
+                </div>
+            </form>
+            <!-- tạo kiểu phạm vi(thanh điều chỉnh) bằng form-range -->
+                <!-- sử dụng thuộc tính step để điều chỉnh giá trị khoảng cách -->
+                <!-- sử dụng thuộc tính min và max để đặt giá trị nhỏ nhất và lớn nhất của phạm vi -->
+                <label class="form-label"> phạm vi</label>
+                <input type="range" class="form-range" min="0" max="100" step="10">
+            <!-- tạo 1 vùng bổ snug dữ liệu như văn bản kí tự biểu tượng bằng input-group  -->
+                <form>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">@</span>
+                        <input type="text" class="form-control" placeholder="Nhập tên">
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Nhập Email">
+                        <span class="input-group-text">
+                            <select class="form-select">
+                                <option>@yahoo.com</option>
+                                <option>@gmail.com</option>
+                                <option>@vn.edu.vn</option>
+                            </select>
+                        </span>
+                    </div>
+                </form>
+            <!-- tạo multiple input -->
+                 <div class="input-group mb-3">
+                    <span class="input-group-text">Nhập thông tin</span>
+                    <input type="text" class="form-control" placeholder="nhập họ">
+                    <input type="text" class="form-control" placeholder="Nhập tên lót">
+                    <input type="text" class="form-control" placeholder="Nhập tên">
+                 </div>
+            <!-- tạo nhãn nổi lên trên khi người dùng focus vào bằng form-floating -->
+                 <div class="form-floating mb-3 mt-3">
+                    <input type="text" class="form-control" placeholder="nhập Email">
+                    <label class="form-label">nhập email</label>
+                 </div>
+                 <div class="form-floating mb-3 mt-3">
+                    <input type="text" class="form-control" placeholder="nhập passwowrd">
+                    <label class="form-label">nhập passwowrd</label>
+                 </div>
+            <!-- floating kết hợp với select -->
+                <div class="form-floating">
+                    <select class="form-select">
+                        <option>con cá</option>
+                        <option value="">con cua</option>
+                        <option value="">con gà</option>
+                    </select>
+                    <label class="form-label">chọn 1 con vật</label>
+                </div>
+<!-- cung cấp phản hồi khi chưa nhập thông tin và khi nhập thông tin -->
+                <form class="was-validated">
+                    <div class="mb-3 mt-3">
+                        <label for="uname" class="form-label">Họ và tên:</label>
+                        <input type="text" class="form-control" id="uname" placeholder="Nhập họ tên" required>
+                        <div class="valid-feedback">Hợp lệ</div>
+                        <div class="invalid-feedback">Vui lòng điền vào trường này</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="pwd" class="form-label">Mật khẩu:</label>
+                        <input type="password" class="form-control" id="pwd" placeholder="Nhập mật khẩu" required>
+                        <div class="valid-feedback">Hợp lệ</div>
+                        <div class="invalid-feedback">Vui lòng điền vào trường này</div>
+                    </div>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" id="myCheck" required>
+                        <label class="form-check-label" for="myCheck">Đồng ý với các điều khoản</label>
+                        <div class="valid-feedback">Hợp lệ</div>
+                        <div class="invalid-feedback">Tick vào hộp thoại để xác nhận</div>
+                    </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+                <!-- demo -->
+                    <form>
+                        <div class="was-validated">
+                            <label for="Ten" class="form-label">nhập cái gì dô thử coi</label>
+                            <input type="text" id="Ten" class="form-control" placeholder="Nhập tên đi cho dễ" required>
+                            <div class="valid-feedback">oke có nhập là tốt</div>
+                            <div class="invalid-feedback">Nhập dô lẹ lên</div>
+                        </div>
+                    </form>
+            <!-- 1 số định dạng button cơ bản  -->
+             <!-- drop-down button -->
+             <div class="dropdown" >
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                    dropdown button
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="#" class="dropdown-item" id="link">link1</a></li>
+                    <li><a href="#" class="dropdown-item" id="link">link2</a></li>
+                    <li><a href="#" class="dropdown-item" id="link">link3</a></li>
+                    <li><hr class="dropdown-divider" id="link"></li>
+                    <li><a href="#" class="dropdown-item" id="link">another link</a></li>
+                </ul>
+            </div>
+                <!-- màu sắc -->
+<button type="button" class="btn">bình thường</button>
+                    <button type="button" class="btn btn-primary">btn-primary</button>
+                    <button type="button" class="btn btn-secondary">btn-secondary</button>
+                    <button type="button" class="btn btn-success">btn-success</button>
+                    <button type="button" class="btn btn-info">btn-info</button>
+                    <button type="button" class="btn btn-warning">btn-warning</button>
+                    <button type="button" class="btn btn-danger">btn-danger</button>
+                    <button type="button" class="btn btn-dark">btn-dark</button>
+                    <button type="button" class="btn btn-light">btn-light</button>
+                    <button type="button" class="btn btn-link">btn-link</button>
+                <!-- chỉnh màu viền -->
+                    <button type="button" class="btn btn-outline-primary">btn-outline-primary</button>
+                    <button type="button" class="btn btn-outline-secondary">btn-outline-secondary</button>
+                    <button type="button" class="btn btn-outline-success">btn-outline-success</button>
+                    <button type="button" class="btn btn-outline-info">btn-outline-info</button>
+                    <button type="button" class="btn btn-outline-warning">btn-outline-warning</button>
+                    <button type="button" class="btn btn-outline-danger">btn-outline-danger</button>
+                    <button type="button" class="btn btn-outline-dark">btn-outline-dark"</button>
+                    <button type="button" class="btn btn-outline-light text-dark">btn-outline-light</button>
+                <!-- làm cho nút khi ấn vào có hiệu ứng loading -->
+                    <button class="btn btn-primary">
+                        <span class="spinner-border spinner-border-sm"></span>
+                        Loading...
+                    </button>
+                    <!-- làm cho nó loading nhưng bị vô hiêu hiệu hóa bằng cách thêm thuộc tính disabled -->
+                    <button class="btn btn-primary" disabled>
+                        <span class="spinner-border spinner-border-sm"></span>
+                        Loading...
+                    </button>
+                    <!-- thêm đổi từ spinner-border sang spinner-grow để có hiệu ứng bong bóng -->
+                    <button class="btn btn-primary" disabled>
+                        <span class="spinner-grow spinner-border-sm"></span>
+                        Loading...
+                    </button>       
+        </div>
+    </body>
+</html>
